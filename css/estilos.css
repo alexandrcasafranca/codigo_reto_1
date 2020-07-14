@@ -1,0 +1,246 @@
+/* ----- GENERAL ----- */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {    
+    font-size: 15px;
+    font-family: var(--fuente);
+}
+
+:root {
+    --ancho : 1440px;
+    --fuente : 'Spartan', sans-serif;   
+    --turquesa : hsl(180, 29%, 50%);
+    --turquesa-claro: hsl(180, 52%, 96%);
+    --turquesa-mas-claro: hsl(180, 31%, 95%);
+    --turquesa-oscura: hsl(180, 8%, 52%);
+    --turquesa-mas-oscura: hsl(180, 14%, 20%);  
+    --color-negro: #313D3D;;  
+}
+
+.main {    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--turquesa-claro);   
+}
+
+/* ----- GENERAL ----- */
+
+/* ----- SOPORTE ----- */
+
+.soporte {
+    height: 158px;        
+    background-image: url("../images/bg-header-desktop.svg");
+    background-color: var(--turquesa);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+/* ----- SOPORTE ----- */
+
+
+/* ----- CONTAINER ----- */
+
+.container {
+    max-width: var(--ancho);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.container > div {
+    margin-bottom: 22px;
+}
+
+.container > div:last-child {
+    margin-bottom: 0px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 31px 36px 31px 150px;
+    
+    position: relative;
+    box-shadow: rgba(93, 165, 164, 0.3) 0px 4px 20px;
+}
+
+.item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--turquesa);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.item__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.item__box {
+    display: flex;
+    align-items: center;
+}
+
+.item__circle {
+    width: 87px;
+    height: 87px;   
+    background-color: var(--turquesa-claro);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;    
+}
+
+.item__circle img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.item__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.item__name {
+    font-weight: 700;
+    color: var(--turquesa);
+    margin-right: 24px;
+}
+
+.item__tickets {
+    display: flex;
+    align-items: center;
+}
+
+.item__tickets button {
+    margin-right: 10px;
+}
+
+.item__tickets button:last-child {
+    margin-right: 0px;
+}
+
+.item__ticket {
+    color: var(--turquesa-mas-claro);
+    background-color: var(--turquesa);
+    padding: 7px 10px;
+    outline: none;
+    font-size: 12px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.item__ticket--black {
+    background-color: var(--color-negro);
+}
+
+.item__title {
+    font-weight: 700;
+    color: var(--color-negro);
+    font-size: 19px;    
+    margin-bottom: 8px;
+}
+
+.item__list {
+    display: flex;   
+}
+
+.item__list li {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.item__list li:first-child {
+    padding-left: 0px;
+}
+
+.item__list li:last-child {
+    padding-right: 0px;
+}
+
+.item__li span {
+    color: var(--color-negro);
+    opacity: 0.5;
+    display: block;
+    font-size: 16px;
+}
+
+.item__buttons {
+    display: flex;
+    align-items: center;   
+    flex-wrap: wrap;    
+    justify-content: flex-end;
+}
+
+.item__buttons li {
+    margin: 11px;
+}
+
+.item__filter {
+    background-color: var(--turquesa-mas-claro);
+    color: var(--turquesa);
+    padding: 12px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    transition: .2s all linear;
+    -webkit-transition: .2s all linear;
+    -moz-transition: .2s all linear;
+    -ms-transition: .2s all linear;
+    -o-transition: .2s all linear;
+}
+
+.item__filter:hover {
+    background-color: var(--turquesa);
+    color: var(--turquesa-claro);
+}
+
+/* ----- CONTAINER ----- */
